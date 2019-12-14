@@ -1,6 +1,7 @@
 # Caesar Cipher (Additive Cipher) using Python
 # Case Sensitive
-
+# Author : wh0am1
+# GitHub : https://github.com/wh0th3h3llam1
 
 
 import os
@@ -11,21 +12,23 @@ def encrypt(strng, key):
 	enc = []
 
 	for i in range(len(strng)):
-		if ord(strng[i]) in range(97, 122):
+		if ord(strng[i]) in range(97, 123):
 			# Small Letter
-			# print("Small Letter : " + strng[i])
+
 			t = (ord(strng[i]) - 97 + key) % 26 + 97
 			enc.append(chr(t))
 
-		elif ord(strng[i]) in range(65, 90):
+		elif ord(strng[i]) in range(65, 91):
 			# Capital Letter
-			# print("Capital Letter : " + strng[i])
+
+			print(ord(strng[i]))
 			t = (ord(strng[i]) - 65 + key) % 26 + 65
+
 			enc.append(chr(t))
 
-		elif ord(strng[i]) in range(48, 57):
+		elif ord(strng[i]) in range(48, 58):
 			# Numbers
-			# print("Num : " + strng[i])
+
 			t = (ord(strng[i]) - 48 + key) % 10 + 48
 			enc.append(chr(t))
 
@@ -40,21 +43,21 @@ def decrypt(strng, key):
 	dec = []
 
 	for i in range(len(strng)):
-		if ord(strng[i]) in range(97, 122):
+		if ord(strng[i]) in range(97, 123):
 			# Small Letter
-			# print("Small Letter : " + strng[i])
+
 			t = (ord(strng[i]) - 97 - key) % 26 + 97
 			dec.append(chr(t))
 
-		elif ord(strng[i]) in range(65, 90):
+		elif ord(strng[i]) in range(65, 91):
 			# Capital Letter
-			# print("Capital Letter : " + strng[i])
+
 			t = (ord(strng[i]) - 65 - key) % 26 + 65
 			dec.append(chr(t))
 
-		elif ord(strng[i]) in range(48, 57):
+		elif ord(strng[i]) in range(48, 58):
 			# Numbers
-			# print("Num : " + strng[i])
+
 			t = (ord(strng[i]) - 48 - key) % 10 + 48
 			dec.append(chr(t))
 
@@ -67,7 +70,7 @@ def decrypt(strng, key):
 
 def brute_force(strng):
 	key = 26
-	print("Brute Forcing the String...")
+	print("Brute Forcing the String.....")
 
 	for k in range(key):
 		print("Key : " + str(k) + " | Decrypted String : ", end="")
@@ -82,7 +85,7 @@ def main():
 			os.system('clear')
 
 		print("****************************************************")
-		print("\tCAESAR CIPHER (ADDITIVE CIPHER) USING PYTHON")
+		print("\t\tCAESAR CIPHER (ADDITIVE CIPHER)")
 		print("****************************************************")
 
 		print("1. Encrypt")
@@ -125,5 +128,6 @@ def main():
 		x = input()
 
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
 	main()
