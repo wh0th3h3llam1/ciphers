@@ -73,7 +73,7 @@ def brute_force(strng):
 	print("Brute Forcing the String.....")
 
 	for k in range(key):
-		print("Key : " + str(k) + " | Decrypted String : ", end="")
+		print("Key : " + "{:02d}".format(k) + " | Decrypted String : ", end="")
 		decrypt(strng, k)
 
 
