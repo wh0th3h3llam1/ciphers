@@ -21,7 +21,6 @@ def encrypt(strng, key):
 		elif ord(strng[i]) in range(65, 91):
 			# Capital Letter
 
-			print(ord(strng[i]))
 			t = (ord(strng[i]) - 65 + key) % 26 + 65
 
 			enc.append(chr(t))
@@ -35,7 +34,7 @@ def encrypt(strng, key):
 		else:
 			enc.append(strng[i])
 	encrypted = ""
-	print(encrypted.join(enc))
+	print("Encrypted String : " + encrypted.join(enc))
 	return encrypted
 
 
@@ -64,7 +63,7 @@ def decrypt(strng, key):
 		else:
 			dec.append(strng[i])
 	decrypted = ""
-	print(decrypted.join(dec))
+	print("Decrypted String : " + decrypted.join(dec))
 	return decrypted
 
 
