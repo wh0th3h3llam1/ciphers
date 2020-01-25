@@ -2,6 +2,7 @@
 # Author : wh0am1
 # GitHub : https://github.com/wh0th3h3llam1
 
+# Considering I and J as Same Characters
 
 import os
 import platform
