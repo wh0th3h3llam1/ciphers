@@ -158,7 +158,6 @@ if __name__ == '__main__':
 		if miller_rabin(p) and miller_rabin(q):
 			if p != q:
 				break
-
 	n = p * q
 
 	public_key, private_key = rsa(n)
@@ -170,19 +169,13 @@ if __name__ == '__main__':
 
 		print("Input should be less than : ", n)
 
-	# binary = bin(strng)[2:]
-	# y = fastExponential(binary, strng, public_key[0], n)
 	y = fastExponential(strng, public_key[0], n)
 
 	print("Encrypted Message : ", y)
 
-	# bina = bin(y)[2:]
-	# z = fastExponential(bina, y, private_key, n)
 	z = fastExponential(y, private_key, n)
 
 	print("Decrypted Message : ", z)
-
-	# print("Public Key : {0} , {1}".format(public_key[0], public_key[1]))
 
 
 #wh0am1
