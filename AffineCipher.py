@@ -29,7 +29,7 @@ def encrypt(strng, k1, k2):
 	encrypted = ""
 	for k in strng:
 		l = ord(k) - 97
-		t = (((l * k1) + k2) % 26 + 97)
+		t = (((l * k1) + k2) % 26) + 97
 		encrypted += (chr(t))
 	
 	print("Encrypted Text : " + encrypted)
